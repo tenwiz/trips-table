@@ -1,0 +1,31 @@
+{
+  "name": "tg-hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production parcel build app/index.html",
+    "dev": "NODE_ENV=development nodemon -w server/ server & parcel app/index.html",
+    "lint": "prettier --write app/*** server/***",
+    "start": "NODE_ENV=production npm run build && NODE_ENV=production node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "match-sorter": "^4.1.0",
+    "moment": "^2.26.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-select": "^3.1.0",
+    "react-table": "6.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5"
+  }
+}
